@@ -11,9 +11,7 @@ const client = new ApolloClient({
   request: async (operation) => {
     operation.setContext({
       headers: {
-        authorization: `token ${
-          process.env.REACT_APP_GITHUB_TOKEN || REACT_APP_GITHUB_TOKEN
-        }`,
+        authorization: `token ${REACT_APP_GITHUB_TOKEN}`,
       },
     });
   },
