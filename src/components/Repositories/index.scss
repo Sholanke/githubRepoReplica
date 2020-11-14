@@ -25,6 +25,22 @@
   top: 0;
   z-index: 1;
   background-color: #fff;
+  align-items: center;
+  &-user {
+    transition: 0.2s ease-out;
+    &.hide {
+      opacity: 0;
+    }
+    .user_profile_picture {
+      height: 33px;
+      height: 33px;
+      border-radius: 100vh;
+    }
+    .name {
+      margin: 0 10px;
+      font-weight: 600;
+    }
+  }
 
   &-links {
     display: flex;

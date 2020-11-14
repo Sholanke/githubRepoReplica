@@ -1,14 +1,24 @@
 .repository_card {
   padding: 24px 0;
   border-bottom: 1px solid var(--color-border);
+  justify-content: space-between;
+
   * {
     color: #586069;
+  }
+  ._top {
+    margin-bottom: 15px;
+  }
+  .repo_desc {
+    line-height: 1.6;
+    margin-top: 9px;
+    margin-bottom: 20px;
+    max-width: 370px;
   }
   .repo_name {
     font-weight: 600;
     color: #0366d6;
     font-size: 20px;
-    margin-bottom: 15px;
 
     &[data-is-private="true"] {
       &:after {
@@ -25,6 +35,29 @@
     }
   }
   .repo_footer {
+    display: flex;
+    align-items: center;
+    .action_button {
+      display: flex;
+      align-items: center;
+      margin-right: 18px;
+      transition: 0.1s ease-out;
+      cursor: pointer;
+
+      &:hover {
+        &,
+        * {
+          color: #0366d6;
+        }
+      }
+      svg {
+        width: 16px;
+        margin: 0 5px;
+      }
+      path {
+        fill: currentColor;
+      }
+    }
     * {
       font-size: 12px;
     }
@@ -41,6 +74,30 @@
         background-color: red;
         margin-right: 6px;
       }
+    }
+  }
+}
+.repo_star_button {
+  display: flex;
+  align-items: center;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: #24292e;
+  font-size: 12px;
+  box-shadow: var(--shadow-small);
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f3f4f6;
+    border-color: #1b1f2326;
+  }
+  svg {
+    height: 16px;
+    margin-right: 4px;
+    path {
+      fill: #6a737d;
     }
   }
 }
