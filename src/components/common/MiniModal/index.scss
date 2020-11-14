@@ -1,5 +1,6 @@
 .github_mini_modal {
   position: absolute;
+  z-index: 90;
   right: 0;
   bottom: 0;
   transform: translate(0, 100%);
