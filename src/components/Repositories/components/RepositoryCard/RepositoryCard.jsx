@@ -7,11 +7,11 @@ export default function RepositoryCard({
     name,
     isPrivate,
     updatedAt,
-    languages: {
-      nodes: [language],
-    },
+    languages: { nodes },
   },
 }) {
+  const language = nodes[0];
+
   return (
     <div className="repository_card">
       <div>
@@ -19,17 +19,7 @@ export default function RepositoryCard({
           {name}
         </p>
         <div className="repo_footer flex">
-          {language ? (
-            <div className="language flex repo_footer-elem">
-              <span
-                className="co"
-                style={{
-                  backgroundColor: language?.color,
-                }}
-              ></span>
-              {language?.name}
-            </div>
-          ) : null}
+          {language ? <Language {...language} /> : null}
           {updatedAt ? (
             <div className="repo_updated_at repo_footer-elem">
               Updated {moment(updatedAt, "YYYYMMDD").fromNow()}
@@ -37,6 +27,20 @@ export default function RepositoryCard({
           ) : null}
         </div>
       </div>
+    </div>
+  );
+}
+
+function Language({ color, name }) {
+  return (
+    <div className="language flex repo_footer-elem">
+      <span
+        className="co"
+        style={{
+          backgroundColor: color,
+        }}
+      ></span>
+      {name}
     </div>
   );
 }
