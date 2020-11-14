@@ -1,0 +1,32 @@
+.app_page_loader {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    height: 100px;
+    height: 100px;
+    animation-name: breathe;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+
+    path {
+      fill: #24292e;
+    }
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+}
