@@ -22,7 +22,7 @@ const REPOSITORIES = gql`
           updatedAt
           forkCount
           isPrivate
-          languages(first: 5) {
+          languages(first: 5, orderBy: { field: SIZE, direction: DESC }) {
             nodes {
               color
               name
