@@ -3,7 +3,7 @@
   z-index: 90;
   right: 0;
   bottom: 0;
-  transform: translate(0, 100%);
+  transform: translate(0, calc(100% + 10px));
   background-color: #fff;
   color: #24292e;
   border: 1px solid #e1e4e8;
