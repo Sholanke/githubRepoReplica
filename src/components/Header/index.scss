@@ -15,14 +15,14 @@
     margin-right: 15px;
   }
   .icon {
-    margin: 0 0 0 15px;
+    margin: 0 0 0 7px;
     summary {
       display: flex;
       align-items: center;
     }
     .profile_picture {
-      height: 30px;
-      width: 30px;
+      height: 20px;
+      width: 20px;
       border-radius: 100vh;
       background: #fff;
       border: 1px solid var(--color-border);
@@ -72,7 +72,6 @@
   details {
     appearance: none;
     position: relative;
-    padding: 10px 0;
     a,
     button {
       &:hover {
