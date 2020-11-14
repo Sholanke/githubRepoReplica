@@ -4,13 +4,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import { REACT_APP_GITHUB_TOKEN } from "./constants/tokens";
 
 const client = new ApolloClient({
   uri: "https://api.github.com/graphql",
   request: async (operation) => {
     operation.setContext({
       headers: {
-        authorization: `token ${process.env.REACT_APP_GITHUB_TOKEN}`,
+        authorization: `token ${REACT_APP_GITHUB_TOKEN}`,
       },
     });
   },
