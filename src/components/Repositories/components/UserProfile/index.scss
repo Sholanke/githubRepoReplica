@@ -1,18 +1,23 @@
+@import "../../../../mixins";
+
 .repo_grid_user-profile {
   margin-top: -32px;
   height: fit-content;
-
+  @include mobile {
+    margin-top: 0;
+  }
+  .name {
+    font-size: 180%;
+    margin: 8px 0 9px 0;
+  }
+  .username {
+    font-size: 140%;
+    font-weight: 300;
+    color: #586069;
+  }
   .data {
-    margin: 30px 0;
-    .name {
-      font-size: 180%;
-      margin: 8px 0 9px 0;
-    }
-    .username {
-      font-size: 140%;
-      font-weight: 300;
-      color: #586069;
-    }
+    margin: 20px 0;
+
     .bio {
       margin: 20px 0;
       line-height: 1.7;
@@ -23,14 +28,21 @@
   .dp_rapper_container {
     position: relative;
     z-index: 2;
+    @include mobile {
+      display: flex;
+      align-items: center;
+    }
+    .dp_container {
+      position: relative;
+    }
     .status {
       height: 38px;
       width: 38px;
       border-radius: 100vh;
       background: rgb(255, 255, 255);
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: 3%;
+      top: 75%;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -38,6 +50,11 @@
       z-index: 1;
       border: 1px solid var(--color-border);
       box-shadow: var(--shadow-small);
+
+      @include mobile {
+        display: none;
+      }
+
       .icon {
         font-size: 19px;
         width: 38px;
@@ -60,5 +77,11 @@
     border: 1px solid var(--color-border);
     position: relative;
     z-index: 1;
+    margin-bottom: 30px;
+    @include mobile {
+      width: 100px;
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 }
