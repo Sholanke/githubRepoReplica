@@ -1,0 +1,43 @@
+.repository_card {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border);
+  * {
+    color: #586069;
+  }
+  .repo_name {
+    font-weight: 600;
+    color: #0366d6;
+    font-size: 20px;
+    margin-bottom: 15px;
+
+    &[data-is-private="true"] {
+      &:after {
+        content: "Private";
+        background: #fff;
+        border: 1px solid var(--color-border);
+        font-weight: 500;
+        color: #586069;
+        font-size: 12px;
+        padding: 1px 7px;
+        border-radius: 100vh;
+        margin-left: 10px;
+      }
+    }
+  }
+  .repo_footer {
+    &-elem {
+      margin-right: 20px;
+    }
+    .language {
+      font-size: 12px;
+      .co {
+        height: 10px;
+        width: 10px;
+        border-radius: 100vh;
+        display: block;
+        background-color: red;
+        margin-right: 6px;
+      }
+    }
+  }
+}

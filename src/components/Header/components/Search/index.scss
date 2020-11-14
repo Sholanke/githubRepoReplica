@@ -1,0 +1,26 @@
+.header_search_rapper {
+  background: #24292e;
+  max-width: 272px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &_slash-icon {
+    position: absolute;
+    right: 8px;
+
+  }
+  input {
+    padding: 6px 12px;
+    border: 1px solid #444d56;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 14px;
+
+    &::placeholder {
+      color: #c8c9cb;
+      letter-spacing: 0.4px;
+    }
+  }
+}
