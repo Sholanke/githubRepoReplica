@@ -4,10 +4,10 @@
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-duration: 0.2s;
-
   .app_wrapper {
-    padding-right: 115px;
-    padding-left: 115px;
+    .app_max_width {
+      max-width: 1216px;
+    }
   }
 }
 .repo_grid {
@@ -30,7 +30,9 @@
   top: 0;
   z-index: 1;
   background-color: #fff;
-  align-items: center;
+  .repo_grid {
+    align-items: center;
+  }
   &-user {
     transition: 0.2s ease-out;
     &.hide {
