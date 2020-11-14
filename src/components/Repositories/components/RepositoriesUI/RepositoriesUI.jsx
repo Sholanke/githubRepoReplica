@@ -11,7 +11,7 @@ export default function RepositoriesUI({
   }, [repositories]);
   return (
     <>
-      {repositories?.reverse().map((repo) => (
+      {[...repositories]?.reverse().map((repo) => (
         <RepositoryCard data={repo} />
       ))}
     </>

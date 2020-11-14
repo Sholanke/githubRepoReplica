@@ -13,15 +13,15 @@ export default function Header() {
           <GitHubLogo />
           <Search />
           <div className="app_header_links">
-            <a href="#">Pull requests</a>
-            <a href="#">Issues</a>
-            <a href="#">Marketplace</a>
-            <a href="#">Explore</a>
+            <a href="/#">Pull requests</a>
+            <a href="/#">Issues</a>
+            <a href="/#">Marketplace</a>
+            <a href="/#">Explore</a>
           </div>
         </div>
 
         <div className="flex">
-          <a href="#" className="header_notification icon">
+          <a href="/#" className="header_notification icon">
             <Notification />
           </a>
           <details
@@ -46,11 +46,11 @@ export default function Header() {
               </svg>
             </summary>
             <MiniModal>
-              <a href="#">New repository</a>
-              <a href="#">Import repository</a>
-              <a href="#">New gist</a>
-              <a href="#">New organization</a>
-              <a href="#">New project</a>
+              <a href="/#">New repository</a>
+              <a href="/#">Import repository</a>
+              <a href="/#">New gist</a>
+              <a href="/#">New organization</a>
+              <a href="/#">New project</a>
             </MiniModal>
           </details>
         </div>
