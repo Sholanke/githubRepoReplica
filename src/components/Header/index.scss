@@ -15,12 +15,24 @@
     margin-right: 15px;
   }
   .icon {
-    margin: 0 6px;
+    margin: 0 0 0 15px;
+    summary {
+      display: flex;
+      align-items: center;
+    }
+    .profile_picture {
+      height: 30px;
+      width: 30px;
+      border-radius: 100vh;
+      background: #fff;
+      border: 1px solid var(--color-border);
+    }
   }
   .header_notification {
     position: relative;
     display: flex;
     width: fit-content;
+    margin-right: 10px;
     &::after {
       content: "";
       height: 10px;
@@ -52,6 +64,9 @@
       font-size: 14px;
       display: block;
       white-space: nowrap;
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
   details {
