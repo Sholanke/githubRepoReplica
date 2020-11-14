@@ -66,6 +66,12 @@ export default function Repositories() {
             <div className="repo_container">
               {setIsLoaded(true)}
 
+              <div className="mbl app_wrapper">
+                <div className="app_max_width">
+                  <UserProfile data={data.viewer} />
+                </div>
+              </div>
+
               <div className="app_wrapper repo_app_header ">
                 <div className="app_max_width repo_grid">
                   <div>
@@ -85,7 +91,6 @@ export default function Repositories() {
                   <header className="repo_app_header-links app_max_width">
                     <a href="/#" className="repo_app_header-link">
                       <svg
-                        class="octicon octicon-book UnderlineNav-octicon hide-sm"
                         height="16"
                         viewBox="0 0 16 16"
                         version="1.1"
@@ -101,7 +106,6 @@ export default function Repositories() {
                     </a>
                     <a href="/#" className="repo_app_header-link active">
                       <svg
-                        class="octicon octicon-repo UnderlineNav-octicon hide-sm"
                         height="16"
                         viewBox="0 0 16 16"
                         version="1.1"
@@ -120,7 +124,6 @@ export default function Repositories() {
                     </a>
                     <a href="/#" className="repo_app_header-link">
                       <svg
-                        class="octicon octicon-project UnderlineNav-octicon hide-sm"
                         height="16"
                         viewBox="0 0 16 16"
                         version="1.1"
@@ -136,7 +139,6 @@ export default function Repositories() {
                     </a>
                     <a href="/#" className="repo_app_header-link">
                       <svg
-                        class="octicon octicon-package UnderlineNav-octicon hide-sm"
                         height="16"
                         viewBox="0 0 16 16"
                         version="1.1"
@@ -156,7 +158,7 @@ export default function Repositories() {
 
               <div className="app_wrapper">
                 <div className="app_max_width repo_grid">
-                  <div className="repo_grid_user-profile-container">
+                  <div className="repo_grid_user-profile-container dsk">
                     <UserProfile data={data.viewer} />
                   </div>
 

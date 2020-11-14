@@ -1,3 +1,5 @@
+@import "../../mixins";
+
 .repo_container {
   padding-top: 20px;
   animation-name: fadeIn;
@@ -14,6 +16,10 @@
   display: grid;
   grid-template-columns: 2.3fr 7.5fr;
   grid-gap: 32px;
+  @include mobile {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+  }
   > div {
     width: 100%;
   }
@@ -30,6 +36,12 @@
   top: 0;
   z-index: 1;
   background-color: #fff;
+  @include mobile {
+    overflow: auto;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
   .repo_grid {
     align-items: center;
   }
@@ -37,6 +49,9 @@
     transition: 0.2s ease-out;
     &.hide {
       opacity: 0;
+    }
+    @include mobile {
+      display: none;
     }
     .user_profile_picture {
       height: 33px;
@@ -64,6 +79,9 @@
     display: flex;
     align-items: center;
     transition: 0.2s ease-out;
+    @include mobile {
+      transform: translate(0, 0);
+    }
 
     &:hover {
       border-color: #d1d5da;
