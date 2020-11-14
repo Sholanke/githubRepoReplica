@@ -65,7 +65,7 @@ export default function RepositoryCard({
           </ActionButton>
           {updatedAt ? (
             <div className="repo_updated_at repo_footer-elem">
-              Updated {moment(updatedAt, "YYYYMMDD").fromNow()}
+              Updated {moment(new Date(updatedAt)).fromNow()}
             </div>
           ) : null}
         </div>
