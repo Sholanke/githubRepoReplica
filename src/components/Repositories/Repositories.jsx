@@ -77,7 +77,7 @@ export default function Repositories() {
                 </div>
               </div>
               <header className="repo_app_header-links app_max_width">
-                <a href="#" className="repo_app_header-link">
+                <a href="/#" className="repo_app_header-link">
                   <svg
                     class="octicon octicon-book UnderlineNav-octicon hide-sm"
                     height="16"
@@ -93,7 +93,7 @@ export default function Repositories() {
                   </svg>
                   overview
                 </a>
-                <a href="#" className="repo_app_header-link active">
+                <a href="/#" className="repo_app_header-link active">
                   <svg
                     class="octicon octicon-repo UnderlineNav-octicon hide-sm"
                     height="16"
@@ -112,7 +112,7 @@ export default function Repositories() {
                     {data.viewer.repositories.nodes.length}
                   </span>
                 </a>
-                <a href="#" className="repo_app_header-link">
+                <a href="/#" className="repo_app_header-link">
                   <svg
                     class="octicon octicon-project UnderlineNav-octicon hide-sm"
                     height="16"
@@ -128,7 +128,7 @@ export default function Repositories() {
                   </svg>
                   Projects
                 </a>
-                <a href="#" className="repo_app_header-link">
+                <a href="/#" className="repo_app_header-link">
                   <svg
                     class="octicon octicon-package UnderlineNav-octicon hide-sm"
                     height="16"
