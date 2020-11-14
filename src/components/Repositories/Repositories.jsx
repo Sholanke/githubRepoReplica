@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import RepositoriesUI from "./components/RepositoriesUI/RepositoriesUI";
@@ -117,19 +117,21 @@ export default function Repositories() {
               </header>
             </div>
 
-            <div className="app_wrapper repo_grid">
-              <div className="repo_grid_user-profile-container">
-                <UserProfile data={data.viewer} />
-              </div>
-
-              <div className="app_max_width">
-                <div className="repo_actions_header">
-                  <form action="">
-                    <Input placeholder="Find a repository..." />
-                  </form>
+            <div>
+              <div className="app_wrapper repo_grid">
+                <div className="repo_grid_user-profile-container">
+                  <UserProfile data={data.viewer} />
                 </div>
 
-                <RepositoriesUI data={data.viewer} />
+                <div className="app_max_width">
+                  <div className="repo_actions_header">
+                    <form action="">
+                      <Input placeholder="Find a repository..." />
+                    </form>
+                  </div>
+
+                  <RepositoriesUI data={data.viewer} />
+                </div>
               </div>
             </div>
           </div>

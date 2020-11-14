@@ -1,7 +1,6 @@
 .repo_grid_user-profile {
-  position: relative;
-  z-index: 2;
-  transform: translate(0, -30px);
+  margin-top: -32px;
+  height: fit-content;
 
   .data {
     margin: 30px 0;
