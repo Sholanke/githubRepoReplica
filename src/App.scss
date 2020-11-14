@@ -43,3 +43,11 @@ details summary::-webkit-details-marker {
     margin: 0 auto;
   }
 }
+.drop_own_caret {
+  height: 5px;
+  width: 10px;
+  display: inline-block;
+  background: #fff;
+  margin: 0 6px;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+}
