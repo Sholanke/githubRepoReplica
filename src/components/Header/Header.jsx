@@ -32,7 +32,9 @@ export default function Header() {
         <div className="flex">
           <GitHubLogo />
           <div
-            className={`flex mbl_links_container ${menuIsOpen ? "is_open" : ""}`}
+            className={`flex mbl_links_container ${
+              menuIsOpen ? "is_open" : ""
+            }`}
           >
             <Search />
             <div className="app_header_links">
@@ -52,7 +54,7 @@ export default function Header() {
           <div className="flex hide_mbl">
             <details
               onBlur={(e) => {
-                e.currentTarget.removeAttribute("open");
+                e?.currentTarget?.removeAttribute("open");
               }}
               className="icon"
             >
@@ -83,7 +85,7 @@ export default function Header() {
 
             <details
               onBlur={(e) => {
-                e.currentTarget.removeAttribute("open");
+                e?.currentTarget?.removeAttribute("open");
               }}
               className="icon"
             >
@@ -97,11 +99,33 @@ export default function Header() {
                 <span className="drop_own_caret"></span>
               </summary>
               <MiniModal>
-                <a href="/#">New repository</a>
-                <a href="/#">Import repository</a>
-                <a href="/#">New gist</a>
-                <a href="/#">New organization</a>
-                <a href="/#">New project</a>
+                <div className="modal_section">
+                  <a href="/#">
+                    Signed in as <strong>Sholanke</strong>
+                  </a>
+                </div>
+                <div className="modal_section">
+                  <a href="/#" className="borederd_link flex">
+                    🤚
+                    <span className="text">
+                      Let's build something awesome on the web
+                    </span>
+                  </a>
+                </div>
+                <div className="modal_section">
+                  <a href="/#">Your profile</a>
+                  <a href="/#">Your repositories</a>
+                  <a href="/#">Your organizations</a>
+                  <a href="/#">Your projects</a>
+                  <a href="/#">Your stars</a>
+                  <a href="/#">Your gists</a>
+                </div>
+                <div className="modal_section">
+                  <a href="/#">Feature preview</a>
+                  <a href="/#">Help</a>
+                  <a href="/#">Settings</a>
+                  <a href="/#">Sign out</a>
+                </div>
               </MiniModal>
             </details>
           </div>

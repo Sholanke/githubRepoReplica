@@ -14,6 +14,10 @@ const REPOSITORIES = gql`
       avatarUrl
       name
       bio
+      status{
+        emojiHTML
+        message
+      }
       repositories(last: 20, isFork: false) {
         nodes {
           name

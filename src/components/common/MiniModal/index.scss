@@ -9,11 +9,44 @@
   border: 1px solid #e1e4e8;
   padding-top: 5px;
   padding-bottom: 5px;
-  min-width: 160px;
+  min-width: 180px;
   border-radius: 6px;
   box-shadow: 0 0 20px rgba(19, 19, 19, 0.075);
+  .modal_section {
+    border-bottom: 1px solid var(--color-border);
+    margin: 0 0 7px 0;
+    padding: 0 0 7px 0;
+    &:last-of-type {
+      border-bottom: 1px solid transparent;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .borederd_link {
+    border: 1px solid var(--color-border);
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin: 0 15px;
+    display: flex;
+    font-size: 15px;
 
-  > * {
+    .text {
+      margin-left: 6px;
+      display: block;
+      max-width: 120px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 12px;
+    }
+    * {
+      font-size: 12px;
+    }
+  }
+  * {
+    color: #24292e;
+  }
+  a {
     padding: 8px 16px;
     display: block;
     color: #24292e;
