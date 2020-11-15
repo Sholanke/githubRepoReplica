@@ -21,9 +21,17 @@ export default function RepositoryCard({
     <div className="repository_card flex">
       <div>
         <div className="_top">
-          <p className="repo_name flex" data-is-private={isPrivate}>
-            {name}
-          </p>
+          <div className="flex">
+            <a
+              href="/#"
+              className="repo_name flex hv-undeline"
+              data-is-private={isPrivate}
+            >
+              {name}
+            </a>
+            {isPrivate && <span className="private_tag">Private</span>}
+          </div>
+
           {!!description && (
             <p className="repo_desc">
               {description.slice(0, truncatePoint)}

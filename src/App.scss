@@ -40,6 +40,15 @@ details summary::-webkit-details-marker {
     display: inline-block;
   }
 }
+.hv-undeline {
+  &:hover {
+    text-decoration: underline;
+    &:after,
+    &::before {
+      text-decoration: none;
+    }
+  }
+}
 
 .dsk {
   @include mobile {
