@@ -100,9 +100,9 @@ export default function Header() {
               </summary>
               <MiniModal>
                 <div className="modal_section">
-                  <a href="/#">
+                  <p>
                     Signed in as <strong>Sholanke</strong>
-                  </a>
+                  </p>
                 </div>
                 <div className="modal_section">
                   <a href="/#" className="borederd_link flex">

@@ -12,6 +12,7 @@ export default function RepositoryCard({
     stargazerCount,
     forkCount,
     description,
+    url,
     languages: { nodes },
   },
 }) {
@@ -22,10 +23,12 @@ export default function RepositoryCard({
       <div>
         <div className="_top">
           <div className="flex">
+            
             <a
-              href="/#"
+              href={url}
               className="repo_name flex hv-undeline"
               data-is-private={isPrivate}
+              target="blank"
             >
               {name}
             </a>
@@ -42,6 +45,7 @@ export default function RepositoryCard({
 
         <div className="repo_footer flex">
           {language ? <Language {...language} /> : null}
+
           <ActionButton count={stargazerCount}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +60,7 @@ export default function RepositoryCard({
               ></path>
             </svg>
           </ActionButton>
+
           <ActionButton count={forkCount}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +76,7 @@ export default function RepositoryCard({
               ></path>
             </svg>
           </ActionButton>
+
           {updatedAt ? (
             <div className="repo_updated_at repo_footer-elem">
               Updated {moment(new Date(updatedAt)).fromNow()}

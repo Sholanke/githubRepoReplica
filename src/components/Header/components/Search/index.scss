@@ -1,3 +1,5 @@
+@import "../../../../mixins";
+
 .header_search_rapper {
   background: #24292e;
   max-width: 272px;
@@ -6,10 +8,31 @@
   display: flex;
   align-items: center;
 
+  @include desktop {
+    transition: .3s ease-out;
+    &[data-is-wide="true"] {
+      max-width: 400px;
+      background: rgba(255, 255, 255, 0);
+      * {
+        color: #444d56;
+      }
+      .header_search_rapper_slash-icon {
+        opacity: 0;
+        pointer-events: none;
+      }
+      input {
+        background-color: #fafbfc;
+        &::placeholder {
+          color: #444d56;
+        }
+      }
+    }
+  }
+
   &_slash-icon {
     position: absolute;
     right: 8px;
-
+    transition: .3s ease-out;
   }
   input {
     padding: 6px 12px;
@@ -17,6 +40,10 @@
     border-radius: 6px;
     width: 100%;
     font-size: 14px;
+    caret-color: royalblue;
+
+    &:focus {
+    }
 
     &::placeholder {
       color: #c8c9cb;
